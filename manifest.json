@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "Close Cases",
+    "version": "0.0.1",
+    "description": "",
+    "background": {
+        "service_worker": "background.js"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "https://deliveryhero.lightning.force.com/lightning/*/Case/*"
+            ],
+            "js": ["content.js"]
+        }
+    ],
+    "permissions": ["activeTab", "debugger", "scripting", "tabs"],
+    "icons": {
+        "128": "icon.png"
+    }
+}
